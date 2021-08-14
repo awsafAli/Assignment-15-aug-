@@ -1,4 +1,4 @@
-// bind, apply, call - Differentiate btw them with examples (github)
+
 
 
 
@@ -26,7 +26,7 @@ const student2= {
 console.log(student2.fullname())
 
 
-Call: 
+1. Call: 
 
 
 const callobj={
@@ -67,7 +67,7 @@ Instead of using the function we can use the call method.
 
 
 
-Apply:
+2.Apply:
 
 const callobj={
 
@@ -104,8 +104,8 @@ It is same as te call method
 The difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
    
 
-   
-Blind:
+  
+3. Blind:
 
 The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
