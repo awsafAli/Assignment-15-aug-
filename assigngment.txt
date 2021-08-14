@@ -1,0 +1,113 @@
+// bind, apply, call - Differentiate btw them with examples (github)
+
+
+
+function getfullname()
+  {
+    return this.firstname + " " + this.lastname;
+  }
+
+const student= {
+  fisrtname: 'A',
+  lastname: 'alii',
+  fullname: getfullname
+ 
+  
+}
+
+const student2= {
+  fisrtname: 'vineeth',
+  lastname: 'kumar',
+  fullname: getfullname
+ 
+  
+}
+
+console.log(student2.fullname())
+
+
+Call: 
+
+
+const callobj={
+
+fullname:function getfullname()
+{
+  return this.fisrtname + " " + this.lastname;
+}
+}
+
+
+let student= {
+    fisrtname: "A",
+    lastname: "alii",
+    
+
+  }
+ 
+  let student2= {
+    fisrtname: "vineeth",
+    lastname: "kumar",
+   
+  }
+  
+  callobj.fullname.call(student2);
+  
+  console.log(callobj.fullname.call(student2));
+
+  console.log(callobj.fullname.call(student));
+  
+
+
+Explain:
+It uses the concept of browning.
+Instead of using the function we can use the call method.
+
+
+
+
+
+Apply:
+
+const callobj={
+
+    fullname:function getfullname()
+    {
+      return this.fisrtname + " " + this.lastname;
+    }
+    }
+    
+    
+    let student= {
+        fisrtname: "A",
+        lastname: "alii",
+        
+    
+      }
+     
+      let student2= {
+        fisrtname: "vineeth",
+        lastname: "kumar",
+       
+      }
+      
+      callobj.fullname.apply(student2);
+      
+      console.log(callobj.fullname.apply(student2));
+    
+      console.log(callobj.fullname.apply(student));.
+
+
+Explain:
+It is same as te call method 
+
+The difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+   
+
+   
+Blind:
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+
+
